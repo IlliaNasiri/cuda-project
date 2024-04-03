@@ -1,0 +1,7 @@
+1. Add initialization kernels:
+    - ones()
+    - random() - cannot be done on GPU, nvm
+
+2. Allow the GPUMat wrapper class to employ the random and ones initialization
+
+3. See how the wrapper constructor works
