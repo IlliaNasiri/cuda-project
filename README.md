@@ -15,7 +15,7 @@ therefore, I have decided to take on this project to answer these questions for 
 * Implementing ReLU activation
 * Implementig forward and backward passes for a Convolutional layer
 * Pooling layer
-
+* Implementing loss function (MSE and MAE), with it's forward/backward computations. 
 
 # Installation: # 
 
