@@ -10,6 +10,7 @@ therefore, I have decided to take on this project to answer these questions for 
 3. CUDA toolkit, installable via:
    ```sudo apt install nvidia-cuda-toolkit   ``` (Read  below if you do not want to install cuda toolkit)
 5. Python Libraries: numpy, cython
+6. Some patience with the installation 
 
 **IF YOU CANNOT FULFILL ANY OF THE REQUIREMENTS, OR DO NOT WANT TO INSTALL CUDA TOOLKIT**: you can easily repeat the steps given below on in google colab. 
 
