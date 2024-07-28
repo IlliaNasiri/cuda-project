@@ -1,11 +1,11 @@
 import numpy as np
 import subprocess
 
-def install_extension():
-    res = subprocess.run(["pip", "install", "."], capture_output=True, text=True)
-    print(res.stdout)
+# def install_extension():
+#     res = subprocess.run(["pip", "install", "."], capture_output=True, text=True)
+#     print(res.stdout)
 
-install_extension()
+# install_extension()
 
 from gpumat import PyGpuMatrix
 import time
