@@ -56,5 +56,5 @@ void GpuMatrix::mul(unsigned int M, unsigned int N, unsigned int K, GpuMatrix* B
 }
 
 void sayHi() {
-    std::cout << "HI FUCKER!!!!" << std::endl;
+    std::cout << "HI!!!!" << std::endl;
 }
