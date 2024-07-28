@@ -2,20 +2,8 @@
 Ever since I have learnt about deep learning, I was curious to find out how Gradient descent works. Also, I really wanted to understand how exactly GPUs speed it up inference and training steps in deep learning; 
 therefore, I have decided to take on this project to answer these questions for myself.
 
-# TO-DOs #
-* (DONE) Matrix Multiplication
-* Elementwise operations (multiplication, addition, negation)
-* Matrix Transpose (used in the backward pass)
-* Random matrix initialization (used for initializing weights)
-* Write an interface so that it could be invoked through Python
-* Implement CUDA ReLU on a matrix
-
-  *Once this functionality has been implemented:*
-* Implementing the forward, and backward passes for a *linear layer*
-* Implementing ReLU activation
-* Implementig forward and backward passes for a Convolutional layer
-* Pooling layer
-* Implementing loss function (MSE and MAE), with it's forward/backward computations. 
+# How does this work: #
+The way this project works is as follows: there exists some CUDA code (with .cuh and .cu) extensions, that is compiled as a shared library (.so) via the nvcc compiler. Then, using Cython, and Setup.py, it is built as an extension that is callable from Python as a library. 
 
 # Installation: # 
 
@@ -88,5 +76,20 @@ print(k)
 
 ```
 
+
+# TO-DOs #
+* (DONE) Matrix Multiplication
+* Elementwise operations (multiplication, addition, negation)
+* Matrix Transpose (used in the backward pass)
+* Random matrix initialization (used for initializing weights)
+* Write an interface so that it could be invoked through Python
+* Implement CUDA ReLU on a matrix
+
+  *Once this functionality has been implemented:*
+* Implementing the forward, and backward passes for a *linear layer*
+* Implementing ReLU activation
+* Implementig forward and backward passes for a Convolutional layer
+* Pooling layer
+* Implementing loss function (MSE and MAE), with it's forward/backward computations. 
 
 
