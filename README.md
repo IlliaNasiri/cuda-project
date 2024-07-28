@@ -40,7 +40,7 @@ cd ../../
 pip install . 
 ```
 
-**Colab:**
+**Colab: MAKE SURE YOU ARE CONNECTED TO A GPU!** 
 
 ```shell
 !mkdir cuda-project
