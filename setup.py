@@ -15,12 +15,14 @@ if not os.path.exists(cuda_dynamic_lib_directory):
 
 shutil.copy( os.path.join(current_path, "extensions/src/libgpumat.so"), cuda_dynamic_lib_directory )
 shutil.copy( os.path.join(current_path, "extensions/src/libmatmul.so"), cuda_dynamic_lib_directory )
+shutil.copy( os.path.join(current_path, "extensions/src/libadd.so"), cuda_dynamic_lib_directory )
 
 ext_modules = [
     Extension("gpumat",
               sources=["GpuMatWrapper.pyx"],
               include_dirs=['extensions/src/', np.get_include()],
               libraries=[ os.path.join(cuda_dynamic_lib_directory, "gpumat"),
+                          os.path.join(cuda_dynamic_lib_directory, "add"),
                           os.path.join(cuda_dynamic_lib_directory, "matmul") ])
 ]
 

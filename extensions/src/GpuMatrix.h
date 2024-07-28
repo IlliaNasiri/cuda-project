@@ -16,6 +16,7 @@ public:
     void loadToDevice();
 
     void mul(unsigned int M, unsigned int N, unsigned int K, GpuMatrix* B, GpuMatrix* C);
+    void add(unsigned int M, unsigned int N, GpuMatrix* B, GpuMatrix* C);
 };
 
 void sayHi();

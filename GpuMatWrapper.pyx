@@ -13,6 +13,8 @@ cdef extern from "GpuMatrix.h":
 
         void mul(unsigned int M, unsigned int N, unsigned int K, GpuMatrix* B, GpuMatrix* C);
 
+        void add(unsigned int M, unsigned int N, GpuMatrix* B, GpuMatrix* C);
+
 cpdef void aaa():
     sayHi()
 
@@ -33,3 +35,6 @@ cdef class PyGpuMatrix:
 
     def mul(self, M, N, K, PyGpuMatrix B, PyGpuMatrix C):
         self.thisptr.mul(M, N, K, B.thisptr, C.thisptr)
+
+    def add(self, M, N, PyGpuMatrix B, PyGpuMatrix C):
+        self.thisptr.add(M, N, B.thisptr, C.thisptr)

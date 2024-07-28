@@ -1,11 +1,18 @@
-from gpumat import PyGpuMatrix
 import numpy as np
+import subprocess
 
+def install_extension():
+    res = subprocess.run(["pip", "install", "."], capture_output=True, text=True)
+    print(res.stdout)
+
+install_extension()
+
+from gpumat import PyGpuMatrix
 import time
 
-M = 12000
-K = 12000
-N = 12000
+M = 10000
+K = 10000
+N = 10000
 
 k = np.ones((M, N), dtype=np.float32)
 
@@ -15,7 +22,8 @@ C = PyGpuMatrix(k, M, N)
 
 start = time.time()
 print("Start Multiplication!")
-A.mul(M, N, K, B, C)
+# A.mul(M, N, K, B, C)
+A.add(M, N, B, C)
 C.loadFromDevice()
 
 stop = time.time()
