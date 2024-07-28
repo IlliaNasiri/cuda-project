@@ -2,6 +2,21 @@
 Ever since I have learnt about deep learning, I was curious to find out how Gradient descent works. Also, I really wanted to understand how exactly GPUs speed it up inference and training steps in deep learning; 
 therefore, I have decided to take on this project to answer these questions for myself.
 
+# TO-DOs #
+* (DONE) Matrix Multiplication
+* Elementwise operations (multiplication, addition, negation)
+* Matrix Transpose (used in the backward pass)
+* Random matrix initialization (used for initializing weights)
+* Write an interface so that it could be invoked through Python
+* Implement CUDA ReLU on a matrix
+
+  *Once this functionality has been implemented:*
+* Implementing the forward, and backward passes for a *linear layer*
+* Implementing ReLU activation
+* Implementig forward and backward passes for a Convolutional layer
+* Pooling layer
+
+
 # Installation: # 
 
 **REQUIREMENTS:** As for the currect phase of development, the requirements are as follows:
@@ -37,6 +52,41 @@ pip install .
 
 ```
 
+# Usage: #
+At this stage of development, the only implemented functionality constitutes matrix multiplication which is one of fundamental operations required to make neural networks work.
+
+To tests its working you can the following code once you have installed the library: 
+
+
+```python
+from gpumat import PyGpuMatrix
+import numpy as np
+
+import time
+
+M = 12000
+K = 12000
+N = 12000
+
+k = np.ones((M, N), dtype=np.float32)
+
+A = PyGpuMatrix(np.ones((M, K), dtype=np.float32), M, K)
+B = PyGpuMatrix(np.ones((K, N), dtype=np.float32), K, N)
+C = PyGpuMatrix(k, M, N)
+
+start = time.time()
+print("Start Multiplication!")
+A.mul(M, N, K, B, C)
+C.loadFromDevice()
+
+stop = time.time()
+print("Done!")
+
+print("Time elapsed: ", stop - start)
+
+print(k)
+
+```
 
 
 
