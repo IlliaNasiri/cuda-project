@@ -64,9 +64,9 @@ import numpy as np
 
 import time
 
-M = 12000
-K = 12000
-N = 12000
+M = 5000
+K = 5000
+N = 5000
 
 k = np.ones((M, N), dtype=np.float32)
 
