@@ -3,7 +3,6 @@
 #include <cuda_runtime_api.h>
 #include <cuda.h>
 #include "matmul.cuh"
-#include "elementwise_add.cuh"
 
 
 // TODO: REMOVE!!!
@@ -56,11 +55,6 @@ void GpuMatrix::mul(unsigned int M, unsigned int N, unsigned int K, GpuMatrix* B
     cudaDeviceSynchronize();
 }
 
-void GpuMatrix::add(unsigned int M, unsigned int N, GpuMatrix* B, GpuMatrix* C) {
-    elementwise_add(M, N, this->device_mat, B->device_mat, C->device_mat);
-    cudaDeviceSynchronize();
-}
-
 void sayHi() {
-    std::cout << "HI!!!!" << std::endl;
+    std::cout << "HI FUCKER!!!!" << std::endl;
 }
