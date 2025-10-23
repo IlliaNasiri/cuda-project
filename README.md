@@ -79,15 +79,15 @@ print(k)
 
 # TO-DOs #
 * (DONE) Matrix Multiplication
-* Elementwise operations (multiplication, addition, negation)
-* Matrix Transpose (used in the backward pass)
+* (DONE) Elementwise operations (multiplication, addition, negation)
+* (DONE) Matrix Transpose (used in the backward pass)
 * Random matrix initialization (used for initializing weights)
-* Write an interface so that it could be invoked through Python
-* Implement CUDA ReLU on a matrix
+* (DONE) Write an interface so that it could be invoked through Python
+* (DONE) Implement CUDA ReLU on a matrix
 
   *Once this functionality has been implemented:*
-* Implementing the forward, and backward passes for a *linear layer*
-* Implementing ReLU activation
+* (DONE) Implementing the forward, and backward passes for a *linear layer*
+* (DONE) Implementing ReLU activation
 * Implementig forward and backward passes for a Convolutional layer
 * Pooling layer
 * Implementing loss function (MSE and MAE), with it's forward/backward computations. 
