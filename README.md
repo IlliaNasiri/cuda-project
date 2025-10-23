@@ -90,6 +90,6 @@ print(k)
 * (DONE) Implementing ReLU activation
 * Implementig forward and backward passes for a Convolutional layer
 * Pooling layer
-* Implementing loss function (MSE and MAE), with it's forward/backward computations. 
+* (DONE) Implementing loss function (MSE and MAE), with it's forward/backward computations. 
 
 
